@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+        
+#topnav{
+    height: 40px;
+   /* width:100%; */
+   background-color:#063c4d;
+    color: white;
+    display: flex;
+    justify-content:right;
+    gap:30px;
+    
+   
+    text-align: center;
+}
+#lastitem{
+    height: 80px;
+   /* width:100%; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    gap: 30px;
+    
+    background-color:#063c4d;
+    color: white;
+   
+
+}
+#topnav>div{
+    width:100%;
+   
+
+}
+#topnav > div:nth-child(1){
+    margin-left: 800px;
+    text-align: center;
+}
+#lastitem > div {
+    width:100%;
+}
+#sidebar{
+  display: inline-block;
+    max-width: 80%;
+    padding: 20px 5px;
+
+}
+img {
+    display: inline-block;
+    /* max-width: 100%; */
+    padding: 40px 10px;
+  }
+#lastitem > div:nth-child(1){
+    margin-right: 800px;
+    text-align: left;
+}
+div > a{
+    color: white;
+    text-decoration: none;
+}
+ #middle{
+    font-family: 'Circular Std', sans-serif;
+    background-color: #063c4d;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color:white;
+    height: 800px;
+    /* width: 100%; */
+    display: flex;
+   
+    padding:30px;
+}
+#middle > div {
+    width:50%;
+    height:800px;
+   
+    padding: 40px 30px;
+
+}
+#middle>div:nth-child(2){
+    width:30%;
+    height:700px;
+    
+
+}
+#middle>div:nth-child(4){
+  width:30%;
+  height:800px;
+  
+}
+input {
+    width:400px;
+    height:80px;
+    border-radius:30px;
+    background-color:white;
+    font-weight:300;
+    margin: 30px;
+    font-size: 16px;
+    line-height: 18px;
+    border:0;
+
+}
+#small{
+  /* color: #063c4d;
+    width: 200px;
+    height:80px;
+    border-radius: 25px;
+    border:0; */
+    max-width: 518px;
+  height: 80px;
+  background: #ffffff;
+  border: 1px solid #dae2e3;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 14px rgba(6, 60, 77, 0.08);
+  border-radius: 142px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-family: 'DM Sans', sans-serif;
+}
+#small:hover, button {
+    /* background-color: #ffc740;
+    -webkit-transform: scale3d(1none, 1none, 1none);
+    transform: scale3d(1none, 1none, 1none); */
+    background: #ffd265;
+  box-shadow: 0px 6px 16px rgba(255, 210, 101, 0.16);
+  border-radius: 80px;
+  height: 60px;
+  width: 40%;
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #063c4d;
+  cursor: pointer;
+   
+  }
+  button{
+    color: #063c4d;
+    width: 140px;
+    height:50px;
+    border-radius: 25px;
+    border:0;
+    
+  }
+ #upper{
+    display: flex;
+    width:100px;
+    height:auto;
+    display: inline-block;
+    max-width: 100%;
+    padding: 40px 10px;
+    display:grid;
+
+  }
+ #lower{
+    display: flex;
+    width:70px;
+    height:auto;
+    display: inline-block;
+    max-width: 100%;
+    padding: 40px 10px;
+    display:grid;
+  }
+  #middle>div>#lower>img{
+    width:70%;
+    height:auto;
+
+  }
+
+  #desclower{
+    display:grid; 
+    grid-template-rows: 100px 100px;
+    grid-template-columns: repeat(2, 1fr) 150px;
+    grid-gap:20px;
+    padding:30px 30px
+
+  }
+body {
+    font-family: 'Circular Std', sans-serif;
+    color: #063c4d;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color:white
+  }
+  
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color:white;
+    font-size: 62px;
+    line-height: 75px;
+    font-weight: 500;
+  }
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 38px;
+    line-height: 40px;
+    font-weight: 500;
+    color:#063c4d;
+  }
+  
+  h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    font-weight: 500;
+    color:#063c4d;
+    padding:30px 20px;
+  }
+  
+  h4 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #85959a;
+  }
+  
+  h5 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    padding:20px;
+  }
+  
+  h6 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+  p {
+    margin-bottom: 10px;
+    color:white;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  a {
+    color: #00d586;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #02b389;
+  }
+  
+  li {
+    color: #576f76;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  
+  img {
+    display: inline-block;
+    max-width: 100%;
+   
+  }
+  
+  
+  strong {
+    color: #063c4d;
+    font-weight: 700;
+  }
+  
+  figure {
+    margin-bottom: 10px;
+  }
+  
+  .paragraph-large {
+    color: #576f76;
+    font-size: 22px;
+    line-height: 36px;
+    border:1px solid red;
+  }
+  
+  .paragraph-large.container-700px {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    border:1px solid white;
+  }
+  
+  .paragraph-large.padding-0px-bottom {
+    margin-bottom: 0px;
+  }
+  
+  
+  .primary-button.small {
+    padding: 15px 24px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  #center{
+    background-color: white;
+   color:#063c4d;
+   margin-top:90px;
+   height:30px;
+   text-align:center;
+   line-height: 20px;
+
+   
+   }
+   #box2{
+    margin-top:150px;
+    height:550px;
+    display:flex;
+   
+    width:100%
+   }
+   #box2>div{
+    height:550px;
+    
+    width:100%;
+    display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+   }
+   /* #box3, #box4, #box5{
+    
+    
+    padding:20px;
+    margin:0 8px;
+    border:1px solid violet;
+   
+   } */
+   #box3>img,#box4>img,  #box5>img{
+    float:left;
+    
+   
+   }
+   
+   #box2>#cent2>img{
+    position: relative;
+     z-index: 1;
+    }
+
+    #primarybutton {
+    padding: 20px 40px;
+    border-color: transparent;
+    border-radius: 100px;
+    background-color: #ffd265;
+    box-shadow: 4px 4px 16px 0 rgba(255, 210, 101, 0.16);
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    color: #063c4d;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+    text-align: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+#rightactivities {
+  position: relative;
+ width: 100%;
+}
+
+#walkme{
+  width:90%;
+  height:500px;
+ 
+  margin:auto;
+  margin-top: 200px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+}
+#walkme>div{
+  width:50%;
+  height:500px;
+  display: flex;
+  float:left;
+}
+#photo3{
+  float:left;
+  
+ 
+}
+#walkme h2:nth-child(5){
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+
+}
+#ph1st{
+position:relative;
+right:30px;
+width:100%;
+height:500px;
+top:30px;
+
+}
+#ph2nd{
+  width:750px;
+  position:relative;
+  top:20px;
+  right:30px;
+}
+
+
+</style>
+<body>
+    
+<div id="topnav">
+
+    <h6>Privacy Center</h6>
+    <h6>Contact Us</h6>
+    <h6>Support</h6>
+    <h6>Login</h6>
+
+</div>
+
+<div id="lastitem">
+    <img id="sidebar" src="https://assets.website-files.com/60819f9be381394642b5659e/6081a538174f4d6bc01bdd27_leadiq-logo.svg" alt="">
+    <h5>Why LeadiQ</h5>
+    <h5>Solution</h5>
+    <h5>Resources</h5>
+    <h5>Pricing</h5>
+    <button>Book a demo</button>
+</div>
+<div id="middle">
+     <div>
+        <h1>Prospect Smarter</h1>
+        <p>LeadIQ makes sales teams more efficient at
+        outbound prospecting by capturing and 
+        sequencing contact information with one click.</p>
+      
+        <input type="email" placeholder="Enter your work email" /><button id="small">Start free</button></input>
+      
+        <div id="desclower">
+       <img src="https://assets.website-files.com/6220f0eff47bc4199f479ed8/6220f0eff47bc4aaca47a037_Clari-01.svg" alt="">
+    <img src="https://assets.website-files.com/6220f0eff47bc4199f479ed8/6220f0eff47bc45bcd479f25_leadiq-logo-showpad.svg">
+    <img src="https://assets.website-files.com/6220f0eff47bc4199f479ed8/6220f0eff47bc4260147a03f_walkme-client-logo-03.svg" alt="">
+   <img src="https://assets.website-files.com/6220f0eff47bc4199f479ed8/6220f0eff47bc4431847a039_Segment-client-logo-04.svg">
+<img src="https://assets.website-files.com/6220f0eff47bc4199f479ed8/6220f0eff47bc4404a479f28_leadiq-logo-sitecore.svg">
+<img src="https://assets.website-files.com/6220f0eff47bc4199f479ed8/6220f0eff47bc47c1d479f24_leadiq-logo-mulesoft.svg">
+</div>
+
+
+</div>
+      <div>
+        
+         
+        <!-- <img id="ph1st" src="https://assets.website-files.com/60819f9be381394642b5659e/628e78dea1a51b019def8fc3_prospector-p-500.png"> -->
+      
+     
+    </div >
+    <img id="ph2nd" src="https://assets.website-files.com/60819f9be381394642b5659e/628e790730e8f2c418c890ae_interface-background-p-800.png"> 
+</div>
+
+<div id="center">
+
+  <h2>Sales teams spend too much time on </h2>>
+  <h2> low value activities.</h2>
+
+</div>
+
+<div id="box2">
+
+  <div>
+<h3>LeadIQ allows you to:</h3>
+<div  id="box3">
+<img src="https://assets.website-files.com/60819f9be381394642b5659e/6081b03989e2987115690e4b_leadiq-activities-icon-eliminates.svg"
+ >
+<h4>Eliminate busy work</h4>
+</div>
+<div id="box4">
+ <img src="https://assets.website-files.com/60819f9be381394642b5659e/6081b0396fa45686e75d2ecc_leadiq-activities-icon-enriches.svg"
+> 
+<h4>Enrich and aggregate your prospect's data</h4>
+</div>
+<div id="box5" >
+  <img src="https://assets.website-files.com/60819f9be381394642b5659e/6081b03925595b6cd5dd0861_leadiq-activities-icon-makes.svg">
+  <h4>Make prioritization and authentic personalization easier</h4>
+</div>
+<div id="primarybutton">
+  <butoon>Browser feature</butoon>
+</div>
+
+</div>
+
+<div id="rightactivities">
+  <div>
+    
+  <img src="https://assets.website-files.com/60819f9be381394642b5659e/61681bbedd3fc2974173a5c8_LeadIQ-Integrations%202-p-1600.png">
+
+</div>
+</div>
+
+</div>
+
+<div id="walkme">
+<div>
+ <img id="photo1" src="https://assets.website-files.com/60819f9be381394642b5659e/6081b679baa783d764f6fc80_leadiq-image-testimonial-icon.svg">
+ </div>
+
+<img id="photo2" src="https://assets.website-files.com/60819f9be381394642b5659e/6081b633c9bc20456cf9deed_leadiq-walkme-logo.svg">
+<h2>“Without LeadIQ, our outbound team’s workflow would be disjointed and time consuming.”</h2>
+<img id="photo3" src="https://assets.website-files.com/60819f9be381394642b5659e/6081b707a0940538e46fc580_leadiq-autor-image.jpg">
+<h2>Aaron Zukoski</h2>
+ <h4>Director of Business Development, WalkMe</h4>
+ 
+</div>
+
+
+
+
+
+</body>
+</html>
+        
