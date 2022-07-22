@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+ <style>
+            * {
+                font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            }
+    #app{
+
+        width:848;
+        height:729;
+       
+    }
+   
+.logo{
+    width: 120px;
+    height:36px;
+    margin-top: 30px;
+    margin-left:180px;
+}
+.panel {
+    width: 490px;
+    height:600px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    margin-top: 60px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.panel h1{
+    margin: 50px 90px;
+}
+.panel .intro-row {
+    width: 490px;
+    height: 80px;
+
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    line-height: 22px;
+ padding-left: 30px;
+    
+}
+.intro{
+    width: 366px;
+    height: 80px;
+    
+}
+#subhead {
+    font-weight: bold;
+    width: 366px;
+    height:22px;
+padding-left:20px; 
+color:gray;
+font-weight: bold;
+}
+.desc{
+    margin:auto;
+    padding-left:20px; 
+   margin-top: -15px;
+}
+.form{
+    width: 490px;
+    height: 280px;
+    
+    margin-top: 40px;
+}
+.item{
+    width: 490px;
+    height: 90px;
+   ;
+}
+label{
+    
+   
+    padding-left:20px; 
+    margin-top:20px;
+}
+input{
+        width: 400px;
+        height: 40px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      margin-left: 20px;
+      margin-top: 20px;
+  }
+#checkbox{
+    margin:auto;
+    color:gray;
+    padding-left:20px;
+}
+#logbtn{
+        background-color:#063c4d;
+        color: #fff;
+    width: 420px;
+    height: 50px;
+    border-radius:10px;
+    border: 0;
+    font-size: 20px;
+    margin-top: 30px;
+    }
+#already{
+    color:gray;
+    margin: 10px 150px;
+}
+</style>
+
+<body>
+
+    <div id="app">
+        
+        <img class="logo" src="https://account.leadiq.com/signup/assets/leadiq-logo.be12fcc3.svg">
+</div>
+
+<div class="panel">
+    <h1>Welcome to LeadIQ</h1>
+
+
+<div class="intro-row">
+<img src="https://account.leadiq.com/signup/assets/welcome.dee70ef2.svg">
+<div class="intro">
+<strong id="subhead">Your improved prospecting process awaits!</strong>
+<div class="desc">
+<p>LeadIQ makes selling, personalization, and interacting with buyers easier</p>
+</div>
+</div>
+</div>
+
+<div class="form">
+
+<div class="item">
+    <label>Work Email</label>
+    
+        <input id="email" type="email" autocomplete="username"/><br/>
+
+</div>
+
+<div id="checkbox">
+    <p>By Signin UP, you agree to the Terms of Use and Privacy Policy </p>
+</div>
+
+<input type="submit" id="logbtn" value="Continue">
+
+<p id="already">Already a User? Login</p>
+
+</div>
+
+</div>
+</body>
+
+  </head>
+  </html> 
+  <script>
+     
+      document.querySelector("#submit").addEventListener("click",myFunction)
+  
+      function myFunction(){
+    let objData={
+        inputEmail:document.querySelector("#email").value,
+    }
+    localStorage.setItem("inputItem",JSON.stringify(objData))
+    alert ("please check your email and click the link to confirm your account.")
+    
+    
+}
+
+  </script>         
