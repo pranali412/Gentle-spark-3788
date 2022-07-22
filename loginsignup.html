@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+<style>
+
+ .nav-container {
+   
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 20px;
+   
+    margin-top: 40px;
+    background-color: #fff;
+}
+.nav-container img {
+    width: 100px;
+}
+.nav-container .nav-items {
+    font-family: Open Sans,sans-serif;
+    padding: 30px 0 20px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.el-button {
+    color: #fff;
+    width: 100px;
+    height: 50px;
+    border-radius:10px;
+    border: 0;
+    background-color:#063c4d;
+}
+.card{
+    width:550px;
+    height: 613px;
+   
+    margin:auto;
+    margin-top: 70px;
+    border-radius:15px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#header{
+    width: 550px;
+    height:100px;
+   
+    margin-top:30px;
+}
+#header img{
+    width: 60px;
+    height: 60px;
+    margin:auto;
+   padding-top:30px;
+   padding-left:225px ;
+}
+.google-author{
+    width:550px;
+    height:80px;
+    margin-top: 10px;
+   
+    
+
+}
+.google-icon img{
+    width: 191px;
+    height:46px;
+    margin:auto;
+    padding-top:10px;
+   padding-left:180px ;
+}
+.flex-center or{
+    width:510px;
+    height:15px;
+    margin:auto;
+}
+#divider {
+  width: 500px;
+  height: 10px;
+  border-top: 1px solid #cfd8dc;
+  margin: 10px 30px;
+  color:#cfd8dc;
+  margin-top: -30px;
+}
+#form{
+        
+        margin: auto;
+       
+        
+        justify-content: center;
+        padding: 20px 15px 30px 40px;
+       
+       
+    }
+    input{
+        width: 400px;
+        height: 40px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        
+        
+    }
+    #logbtn{
+        background-color:#063c4d;
+        color: #fff;
+    width: 420px;
+    height: 70px;
+    border-radius:10px;
+    border: 0;
+    font-size: 20px;
+    margin-top: 30px;
+    }
+    h4{
+        margin-bottom: 8px;
+    }
+    /* a{
+        display: inline-block;
+        width: 92%;
+        height: 35px;
+        border: 0px solid rgb(244, 241, 241);
+        background-color: #063c4d;
+        border-radius: 10px;
+        margin-top: 30px;
+        font-weight: bolder;
+        font-size: 15px;
+        text-align: center;
+        padding-top: 15px ;
+        text-decoration: none;
+        
+    }
+    a:hover{
+        background-color: rgb(27, 70, 240);
+        color: white;
+    } */
+
+
+</style>
+
+
+    </head>
+    <body>
+       <div class="nav-container">
+
+<img src="https://account.leadiq.com/common/img/logo-green-full.f6ad239e.svg">
+
+<div class="navitems"><button type="button" class="el-button"> 
+    <span>Sign up</span>
+</button>
+</div>
+ </div>
+
+ <div class="card">
+
+    <div id="header">
+ <img src="https://account.leadiq.com/common/img/logo-stripe.529f0a03.png">
+    </div>
+
+    <section class="google-author">
+        <a href="https://integrations.leadiq.com/v2/google/authenticate?redirect_uri=https://account.leadiq.com/app/signin/&affiliation=LeadIQ">
+         <span class="google-icon">
+          <img src="https://account.leadiq.com/common/img/google-sign-in-2x.56f00e35.png">
+            
+         </span>
+          </a>
+    </section>
+
+<br><div class="flex-center or">
+    <div id="divider"></div>
+</div>
+
+<form action="" id="form">
+   
+    <H4>Email</H4>
+    <input id="email" type="text" placeholder="Enter email" /><br />
+    <h4>Password</h4>
+    <input id="password" type="password" placeholder="Enter password">
+    <input type="submit" id="logbtn" value="LOGIN">
+</form>
+
+
+
+
+</div>
+        
+        
+    </body>
+</html>
+
+<script>
+ 
+    let inputData=JSON.parse(localStorage.getItem("inputItem"))
+   
+       document.querySelector("#form").addEventListener("submit",myProject)
+   
+       function myProject(){
+           let email=document.querySelector("#email").value
+           let password=document.querySelector("#password").value
+        if(email!=inputData.inputEmail && password!=inputData.inputPassword){
+           alert("Invalid password or email.")
+        }else if(email==inputData.inputEmail && password!=inputData.inputPassword){
+           alert("Invalid password or email.")
+        }else if(email!=inputData.inputEmail && password==inputData.inputPassword){
+           alert("Email is wrong")
+        }else{
+           alert("Login Successfull")
+        }
+        
+       }
+   
+   
+   </script>
